@@ -182,6 +182,11 @@ public @interface ApiOperation {
     Extension[] extensions() default @Extension(properties = @ExtensionProperty(name = "", value = ""));
 
     /**
+     * @return an optional array of permissions
+     */
+    Permissions[] permissions() default @Permissions(permissions = @Permission(name = "", value = ""));
+
+    /**
      * Ignores JsonView annotations while resolving operations and types. For backward compatibility
      *
      */
